@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Login Portal</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+        <div class="header-content-wrapper">
+            <span class="text-preamble">Bank of America deposit products:</span>
+            <img src="boa_header.svg" alt="Announcement Banner Image">
+        </div>
+    </div>
+
+    <!-- HEADER LOGO WRAPPER: Separate container above DIV 1, left-aligned -->
+    <div class="header-wrapper">
+        <a href="#home">
+            <img src="boa_headerlogo.svg" alt="Bank of America Logo" class="header-logo">
+        </a>
+    </div>
+
+    <!-- DIV 1: Parent container holding the portal header and DIV 2 (Background #FFFFFF) -->
+    <div id="div1" class="sub-header-menu">
+        <!-- Portal Header text: Log in to Online Banking -->
+        <div class="portal-header">
+            <h2>Log in to Online Banking</h2>
+        </div>
+
+        <!-- DIV 2: Nested inside DIV 1, dimensioned at 330px x 330.667px -->
+        <div id="div2" class="portal-container-full">
+            <div class="login-box-wrapper">
+                <div class="login-section">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="userId">User ID</label>
+                            <input type="text" id="userId" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" required>
+                        </div>
+
+                        <!-- Save User ID Checkbox Container -->
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="saveUserId">
+                            <label for="saveUserId">Save user ID</label>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Log in</button>
+                        
+                        <!-- Anchor Links Container (Centered) -->
+                        <div class="links-group">
+                            <a href="#forgot-credentials" class="forgot-link">Forgot user ID/password</a>
+                            <div class="inline-links">
+                                <a href="#security-help" class="security-link">Security &amp; Help</a>
+                                <a href="#enroll" class="enroll-link">Enroll</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ERROR MODAL POP-UP -->
+    <div id="errorModal" class="modal-overlay">
+        <div class="modal-card">
+            <button id="closeModal" class="modal-close-btn" aria-label="Close">&times;</button>
+            <div class="modal-header-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c41230" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+            </div>
+            <h3 class="modal-title">Account Alert</h3>
+            <p class="modal-message">Oops, there is an error with your account. Please call 9876543210</p>
+            <a href="tel:9876543210" class="btn-call-now">Call Now</a>
+        </div>
+    </div>
+
+    <!-- Main Stack Wrapper for remaining sections -->
+    <div class="page-wrapper">
+        <!-- SECTION 2: Info Section -->
+        <div class="section-card info-section">
+            <h3>Why Use Our Portal?</h3>
+            <div style="display: flex;">Our secure infrastructure delivers lightning-fast response times combined with absolute data privacy and robust compliance protocols.</div>
+            
+            <ul class="feature-list">
+                <li>End-to-end multi-layer encryption</li>
+                <li>Instant sync across all registered devices</li>
+                <li>24/7 dedicated automated monitoring</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECTION 3: Footer with Links -->
+    <div class="site-footer">
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+                <li><a href="#support">Support Center</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="copyright">&copy; 2026 Enterprise Portal. All rights reserved.</div>
+        </div>
+    </div>
+
+    <!-- JavaScript File Linking -->
+    <script src="index.js"></script>
+
+</body>
+</html>

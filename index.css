@@ -1,0 +1,587 @@
+/* Import Roboto Font with 400 and 500 weights */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* CSS Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --bg-color: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1;
+}
+
+/* 1. ANNOUNCEMENT BAR */
+.announcement-bar {
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 100%;
+}
+
+.header-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.text-preamble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 16px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    color: #646464;
+    margin: 6px 0px;
+}
+
+.announcement-bar img {
+    display: flex;
+    max-height: 16px;
+    width: auto;
+}
+
+/* HEADER WRAPPER: Separate top container holding the left-aligned logo */
+.header-wrapper {
+    width: 100%;
+    height: 72px;
+    background-color: #ffffff;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-wrapper a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 231px;
+    height: 24px;
+}
+
+.header-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIV 1: Parent container holding title and DIV 2 with background #FFFFFF */
+#div1 {
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Portal header inside DIV 1: Sized 495x44 with margin 64px 0px 32px */
+.portal-header {
+    width: 495px;
+    height: 44px;
+    margin: 64px 0px 32px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portal-header h2 {
+    font-family: 'cnx-regular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    color: #000000;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/* DIV 2: Card container sized to exactly 330px x 330.667px */
+#div2 {
+    width: 330px;
+    height: 330.667px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    padding: 10px 24px;
+    border-radius: 12px;
+    border-top: 6px solid #c41230;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Inner wrapper containing the login box */
+.login-box-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+/* SECTION 1: Login Panel Div */
+.login-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    width: 282px;
+}
+
+/* Label styling: 14px roboto-medium and #000000 font color */
+.form-group label {
+    display: flex;
+    margin-bottom: 4px;
+    font-family: 'roboto-medium', 'Roboto', 'Segoe UI', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+}
+
+/* Input box styling: Exactly 282px width by 36px height with no placeholder text */
+.form-group input {
+    display: flex;
+    width: 282px;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+/* Checkbox group container */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    width: 282px;
+    margin-bottom: 16px;
+}
+
+/* Checkbox size: Exactly 24px x 24px */
+.checkbox-group input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Checkbox label styling: Dimensions 107.94px x 24px, 16px roboto-regular, color #000000, padding 0px 8px 0px 12px */
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    width: 107.94px;
+    height: 24px;
+    font-family: 'roboto-regular', 'Roboto', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    padding: 0px 8px 0px 12px;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* "Log in" Button styling: 282 x 44, 20px roboto-regular, color #FFFFFF, background #012169, padding 8px 24px */
+.btn-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 282px;
+    height: 44px;
+    padding: 8px 24px;
+    margin-bottom: 16px;
+    background-color: #012169;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-family: 'roboto-regular', 'Roboto', 'Segoe UI', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #01184e;
+}
+
+/* Container for anchor links aligned to the center */
+.links-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 282px;
+    gap: 4px;
+}
+
+/* "Forgot user ID/password" Anchor Link styling */
+.forgot-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 154.9px;
+    height: 20px;
+    font-family: 'roboto-medium', 'Roboto', 'Segoe UI', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #0053C2;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.forgot-link:hover {
+    color: #003a88;
+}
+
+/* Inline container for Security & Help and Enroll links */
+.inline-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* "Security & Help" Anchor Link styling */
+.security-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95.88px;
+    height: 20px;
+    font-family: 'roboto-medium', 'Roboto', 'Segoe UI', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #0053C2;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.security-link:hover {
+    color: #003a88;
+}
+
+/* "Enroll" Anchor Link styling */
+.enroll-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35.5px;
+    height: 20px;
+    font-family: 'roboto-medium', 'Roboto', 'Segoe UI', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #0053C2;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.enroll-link:hover {
+    color: #003a88;
+}
+
+/* ERROR MODAL POP-UP STYLES */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-card {
+    background-color: #FFFFFF;
+    width: 360px;
+    padding: 32px 24px;
+    border-radius: 12px;
+    border-top: 6px solid #c41230;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    animation: modalSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #64748b;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close-btn:hover {
+    color: #000000;
+}
+
+.modal-header-icon {
+    margin-bottom: 12px;
+}
+
+.modal-title {
+    font-family: 'roboto-medium', 'Roboto', 'Segoe UI', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.modal-message {
+    font-family: 'roboto-regular', 'Roboto', 'Segoe UI', sans-serif;
+    font-size: 15px;
+    color: #334155;
+    line-height: 1.4;
+    margin-bottom: 24px;
+}
+
+.btn-call-now {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
+    background-color: #c41230;
+    color: #FFFFFF;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'roboto-medium', 'Roboto', 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn-call-now:hover {
+    background-color: #a00e26;
+}
+
+/* Main Container div stacking other sections vertically */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 100%;
+    max-width: 1014px;
+    margin: 40px auto;
+    flex: 1;
+    padding: 0 20px;
+}
+
+/* SECTION 2: Info Section Div */
+.section-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.info-section {
+    background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+    color: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.info-section h3 {
+    display: flex;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+.feature-list li::before {
+    content: "✓";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+}
+
+/* SECTION 3: Footer Div with Links */
+.site-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    padding: 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    max-width: 1014px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.footer-links a {
+    display: flex;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.copyright {
+    display: flex;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Mobile alignment adjustments */
+@media (max-width: 768px) {
+    .header-wrapper {
+        justify-content: center;
+        padding: 0 20px;
+    }
+    #div1 {
+        padding: 0 20px 30px 20px;
+    }
+    .portal-header {
+        width: 100%;
+        max-width: 100%;
+    }
+    .portal-header h2 {
+        font-size: 28px;
+    }
+}
